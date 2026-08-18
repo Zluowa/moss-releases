@@ -3,69 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moss 0.7.2 内测下载</title>
-  <meta name="description" content="Moss 桌面端 0.7.2 内测。未签名 Mac / Windows 包。系统会拦截，打开前请先看安装说明。">
+  <title>Moss 下载</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="top">
     <a class="mark" href="./">Moss</a>
     <nav>
-      <a href="./#download">下载</a>
-      <a href="./#notes">更新</a>
+      <a href="https://github.com/Zluowa/moss-releases/releases">Release</a>
       <a href="./install/">怎么打开</a>
-      <a href="https://github.com/Zluowa/moss-releases/releases">全部 Release</a>
     </nav>
   </header>
-
   <main>
-    <section class="hero">
-      <p class="eyebrow">0.7.2 内测 · 未签名</p>
-      <h1>本机工作区，把编码代理收进一个桌面端。</h1>
-      <p class="lede">Moss 跑在你自己的电脑上。连上已经登录好的编码代理，从一个仓库、一件有边界的任务开始。</p>
-      <p class="warn">这两份安装包<strong>没有</strong>经过 Apple / Microsoft 签名和公证。打开时系统会拦截。请先看 <a href="./install/">怎么打开未签名包</a>。</p>
-      <div class="actions" id="download">
-        <a class="btn primary" href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-mac-arm64-unsigned.zip">下载 Mac（Apple Silicon，zip）</a>
-        <a class="btn" href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-win-x64-unsigned.exe">下载 Windows（x64，安装程序）</a>
-      </div>
-      <p class="fine">Mac 包在 Linux 上交叉打出，没有原生 Swift helper，部分能力可能不可用。Windows 是 build-only 未签名 NSIS。没有 Linux 下载。</p>
-    </section>
-
-    <section id="notes">
-      <h2>0.7.2 这次更新</h2>
-      <ul class="notes">
-        <li>线程目标会留下来，做完一回合后可以按目标继续，而不是每次重说。</li>
-        <li>新增 /debug 取证模式：观察、复现、调查、修补、验证。</li>
-        <li>工作区文件搜索和内容搜索，结果能直接开到右侧文件窗。</li>
-        <li>堆叠 Pull Request：位置标记、按栈确认、合并后刷新。</li>
-        <li>消息级分叉，线程可以从一条消息另开。</li>
-        <li>大库启动和流式渲染更快；自动化连续失败会停，而不是一条开关打死。</li>
-        <li>Mac 上的 iOS Simulator 窗格需要本机编出来的 helper。这份交叉内测包没有它。</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>选平台</h2>
-      <div class="grid">
-        <article>
-          <h3>macOS</h3>
-          <p>未签名 zip · Apple Silicon</p>
-          <p>下载后请走「右键打开」，或到系统设置 → 隐私与安全性 → 仍要打开。</p>
-          <a href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-mac-arm64-unsigned.zip">下载 zip</a>
-        </article>
-        <article>
-          <h3>Windows</h3>
-          <p>未签名安装程序 · 64 位</p>
-          <p>SmartScreen 会拦。点「更多信息」，再点「仍要运行」。</p>
-          <a href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-win-x64-unsigned.exe">下载 exe</a>
-        </article>
-      </div>
-      <p class="fine"><a href="https://github.com/Zluowa/moss-releases/releases/tag/v0.7.2">Release v0.7.2</a> 里有 SHA256SUMS。请先校验再打开。</p>
-    </section>
+    <h1>下载 Moss 0.7.2</h1>
+    <p class="warn">未签名内测包。系统会拦截，先看 <a href="./install/">怎么打开</a>。</p>
+    <p>
+      <a class="btn primary" href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-mac-arm64-unsigned.dmg">Mac arm64（dmg）</a>
+      <a class="btn" href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-mac-arm64-unsigned.zip">Mac arm64（zip）</a>
+      <a class="btn" href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-win-x64-unsigned.exe">Windows x64（exe）</a>
+      <a class="btn" href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-win-x64-unsigned.zip">Windows x64（zip）</a>
+    </p>
+    <p class="fine"><a href="https://github.com/Zluowa/moss-releases/releases/tag/v0.7.2">v0.7.2</a> 里有 SHA256SUMS。</p>
   </main>
-
-  <footer>
-    <p>Moss Desktop 内测频道。源码不在这个仓库。</p>
-  </footer>
 </body>
 </html>

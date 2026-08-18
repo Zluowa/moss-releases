@@ -4,56 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>怎么打开未签名的 Moss</title>
-  <meta name="description" content="Moss 0.7.2 内测包未签名。macOS Gatekeeper 和 Windows SmartScreen 会拦截。这里是逐步打开方法。">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <header class="top">
     <a class="mark" href="../">Moss</a>
     <nav>
-      <a href="../#download">下载</a>
-      <a href="../#notes">更新</a>
+      <a href="../">下载</a>
       <a href="./">怎么打开</a>
     </nav>
   </header>
-
   <main>
-    <section class="hero">
-      <p class="eyebrow">安装说明 · 系统会拦</p>
-      <h1>未签名包打开前先读这一页。</h1>
-      <p class="lede">0.7.2 内测没有 Apple 公证，也没有 Windows Authenticode。这是预期行为，不是下载坏了。</p>
-      <p class="warn">不要把「仍要打开」当成正式发布流程。正式签名包以后才会走另一条通道。</p>
-    </section>
-
-    <section>
-      <h2>macOS Gatekeeper</h2>
-      <ol>
-        <li>从 <a href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-mac-arm64-unsigned.zip">Release</a> 下载 zip，先解压。</li>
-        <li>不要双击。按住 Control 再点 Moss，或右键选「打开」。</li>
-        <li>对话框会写来自身份不明的开发者。选「打开」。</li>
-        <li>如果已经被拦过：打开「系统设置」→「隐私与安全性」，拉到被拦记录，点「仍要打开」。</li>
-        <li>再用密码或 Touch ID 确认。</li>
-      </ol>
-      <p class="fine">这份 Mac zip 是在 Linux 上交叉打的内测包，没有 AppSnap / Swift helper。模拟器窗格等原生能力可能不可用。</p>
-    </section>
-
-    <section>
-      <h2>Windows SmartScreen</h2>
-      <ol>
-        <li>下载 <a href="https://github.com/Zluowa/moss-releases/releases/download/v0.7.2/Moss-0.7.2-win-x64-unsigned.exe">未签名安装程序</a>。</li>
-        <li>双击后如果出现「Windows 已保护你的电脑」，点「更多信息」。</li>
-        <li>再点「仍要运行」。</li>
-        <li>如果被 Defender 隔离，到「病毒和威胁防护」里恢复这份文件后再装。</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>校验</h2>
-      <p>每个 Release 都有 SHA256SUMS。打开前请先对一下哈希。</p>
-      <pre>shasum -a 256 -c SHA256SUMS</pre>
-      <pre>Get-FileHash .\Moss-0.7.2-win-x64-unsigned.exe -Algorithm SHA256</pre>
-      <p><a href="../">返回首页</a> · <a href="https://github.com/Zluowa/moss-releases/releases">全部 Release</a></p>
-    </section>
+    <h1>怎么打开未签名包</h1>
+    <p>0.7.2 内测没有 Apple 公证，也没有 Windows Authenticode。系统拦截是预期的。</p>
+    <h2>macOS</h2>
+    <ol>
+      <li>下载后不要双击。按住 Control 再点 Moss，或右键「打开」。</li>
+      <li>若已拦过：系统设置 → 隐私与安全性 → 「仍要打开」。</li>
+    </ol>
+    <h2>Windows</h2>
+    <ol>
+      <li>SmartScreen 出现时点「更多信息」，再点「仍要运行」。</li>
+    </ol>
+    <p class="fine"><a href="../">返回下载</a></p>
   </main>
 </body>
 </html>

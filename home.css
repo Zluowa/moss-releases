@@ -178,10 +178,10 @@ a { color: inherit; }
 
 .hero h1 {
   max-width: 18em;
-  font-size: clamp(1.75rem, 4.6vw, 2.75rem);
+  font-size: clamp(2rem, 5.2vw, 3.25rem);
   font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1.12;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
 }
 
 .hero .lede {
@@ -243,8 +243,7 @@ a { color: inherit; }
   .section { padding: 5rem 0; }
 }
 
-.eyebrow,
-.num {
+.eyebrow {
   font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.625rem;
   font-weight: 500;
@@ -252,8 +251,6 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--quiet);
 }
-
-.num { color: var(--accent); margin-bottom: 0.75rem; }
 
 .section h2,
 .closing h2 {
@@ -366,6 +363,30 @@ a { color: inherit; }
 
 @media (min-width: 640px) {
   .slab { padding: 6rem 0 0; }
+}
+
+.slab-kicker {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.slab-num {
+  font-size: clamp(3rem, 7vw, 4.75rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.85;
+  color: var(--ink);
+}
+
+.slab-cat {
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .slab h3 {

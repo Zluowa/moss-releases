@@ -1,1 +1,0 @@
-var e=`Zluowa/moss-releases`;`${e}`;var t=`https://github.com/${e}/releases`,n=`https://api.github.com/repos/${e}/releases/latest`,r=`moss-latest-release`;async function i(){let e=sessionStorage.getItem(r);if(e)return JSON.parse(e);let t=await fetch(n).then(e=>e.json());return t?.assets&&sessionStorage.setItem(r,JSON.stringify(t)),t}export{i as n,t};

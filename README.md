@@ -1,35 +1,44 @@
 # Moss Desktop Releases
 
-This repository is the public download and update channel for Moss Desktop.
-It contains release notes, integrity metadata, and signed installation assets.
+This repository is the public download channel for Moss Desktop internal
+builds. It hosts the 0.7.2 beta landing page, install notes, checksums, and
+**unsigned** Mac / Windows packages.
 
-Moss source code, build infrastructure, service configuration, and operational
-data are maintained in private engineering systems and are not mirrored here.
+These builds are not Apple-notarized and not Authenticode-signed. macOS
+Gatekeeper and Windows SmartScreen will block them. Read
+https://zluowa.github.io/moss-releases/install before opening a download.
+
+Moss source code, build infrastructure, and operational data stay in private
+engineering systems and are not mirrored here.
 
 ## Downloads
 
-Public downloads will appear on the GitHub Releases page after platform signing,
-macOS notarization, and installation testing have all passed.
+- Site: https://zluowa.github.io/moss-releases/
+- Install notes: https://zluowa.github.io/moss-releases/install
+- Release assets: https://github.com/Zluowa/moss-releases/releases
 
-No unsigned package is published through this repository.
+Current internal channel: **v0.7.2** (unsigned).
+
+| File | Platform |
+| --- | --- |
+| `Moss-0.7.2-mac-arm64-unsigned.zip` | macOS Apple Silicon, Linux-cross unsigned zip |
+| `Moss-0.7.2-win-x64-unsigned.exe` | Windows x64 NSIS, unsigned |
+| `SHA256SUMS` | checksums |
+
+The Mac zip was produced on Linux with `CSC_IDENTITY_AUTO_DISCOVERY=false`
+and without the Swift AppSnap helper. Treat it as an internal preview.
 
 ## Verify a download
-
-Each release includes `SHA256SUMS`. Verify the downloaded installer before
-opening it:
 
 ```bash
 shasum -a 256 -c SHA256SUMS
 ```
 
-Windows users can verify a single file in PowerShell:
-
 ```powershell
-Get-FileHash .\Moss-Setup.exe -Algorithm SHA256
+Get-FileHash .\Moss-0.7.2-win-x64-unsigned.exe -Algorithm SHA256
 ```
 
 ## 提示
 
-这里是 Moss 桌面端的公开下载与自动更新仓库，仅发布经过平台签名、macOS
-公证和安装测试的正式安装包。源码、构建系统、服务配置及运营数据不会同步到
-本仓库。
+这里是 Moss 桌面端的公开下载仓。0.7.2 内测发布的是未签名 Mac / Windows
+安装包。系统会拦截，打开步骤见 /install。源码和构建系统不会同步到本仓库。

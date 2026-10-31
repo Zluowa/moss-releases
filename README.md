@@ -17,10 +17,9 @@ Current release: **v1.0.2** (unsigned).
 | File | Platform |
 | --- | --- |
 | `Moss-1.0.2-x64.exe` | Windows x64 installer, unsigned |
+| `Moss-1.0.2-arm64.dmg`, `Moss-1.0.2-arm64.zip` | macOS Apple silicon, unsigned, no automatic updates |
 | `moss.yml`, `latest.yml`, `Moss-1.0.2-x64.exe.blockmap` | Update metadata read by installed Windows apps |
-| `SHA256SUMS` | Checksums |
-
-The macOS 1.0.2 package follows later.
+| `SHA256SUMS`, `SHA256SUMS-macOS` | Checksums for Windows and macOS |
 
 ## Updates
 
